@@ -37,9 +37,6 @@ router.post('/get', async (req, res) => {
 
 router.post('/update', async (req, res) => {
   try {
-    // let nft = await LazyNFT.findOneAndUpdate({_id: req.body._id}, {$set:owner: req.body.owner}, {
-    //   new: true
-    // });
     let nft = await LazyNFT.findOne({_id: req.body._id});
     nft.owner = req.body.owner;
     await nft.save();
