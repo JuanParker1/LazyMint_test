@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api/lazyNFT"; 
-// const BASE_URL = "https://saliks-discord.herokuapp.com/";
+const BASE_URL = "http://31.44.6.111:5000/api/lazynft"; 
 
 const api = axios.create({
     baseURL: BASE_URL
@@ -24,7 +23,6 @@ export const createLazyNFT = async (data) => {
     } catch (err) {
         return {
             error: true,
-            message: err.response.data,
         };
     }
 };
@@ -36,7 +34,6 @@ export const updateNFT = async (data) => {
     } catch (err) {
         return {
             error: true,
-            message: err.response.data,
         };
     }
 };
@@ -48,7 +45,6 @@ export const getNFTs = async () => {
     } catch (err) {
         return {
             error: true,
-            message: err.response.data,
         };
     }
 };

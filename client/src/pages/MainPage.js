@@ -28,7 +28,7 @@ export default function MainPage() {
             alert("Choose Image");
             return;
         }
-        let tokenID = (await getNFTs()).length + 1;
+        let tokenID = (await getNFTs()).length + 4;
         let success = await uploadToIPFS(selectedImage, tokenID);
         // let success ={data: {IpfsHash: "await  Upload(values.userID)"}};
         if (success) {
