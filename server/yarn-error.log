@@ -1,0 +1,56 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Ex\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\xampp\php\;C:\Users\Ex\AppData\Local\Programs\Python\Python37\;C:\Users\Ex\AppData\Local\Programs\Python\Python37\Scripts\;C:\Program Files\MongoDB\Server\5.0\bin\;C:\Program Files\Google\Chrome\Application\;C:\Program Files (x86)\PuTTY\;C:\Users\Ex\AppData\Local\Microsoft\WindowsApps;;C:\Users\Ex\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ex\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  15.8.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, lstat 'E:\Contracts\lazy mint\devconnector_2.0\client'
+
+npm manifest: 
+  {
+    "name": "devconnector",
+    "version": "1.0.0",
+    "description": "Social network for developers",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server",
+      "server": "nodemon server",
+      "client": "npm start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\"",
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "author": "Brad Traversy",
+    "license": "MIT",
+    "dependencies": {
+      "axios": "^0.21.0",
+      "bcryptjs": "^2.4.3",
+      "client": "file:client",
+      "config": "^3.3.3",
+      "express": "^4.17.1",
+      "express-validator": "^6.8.1",
+      "gravatar": "^1.8.1",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.11.8",
+      "normalize-url": "^5.3.0"
+    },
+    "devDependencies": {
+      "concurrently": "^5.3.0",
+      "nodemon": "^2.0.6"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
